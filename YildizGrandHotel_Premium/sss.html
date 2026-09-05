@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sıkça Sorulan Sorular — Yıldız Grand Hotel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,450;9..144,600&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="premium-style.css">
+</head>
+<body>
+
+<header id="siteHeader">
+  <div class="brand">Yıldız Grand Hotel<small>İSTANBUL · EST. 1998</small></div>
+  <nav>
+    <a href="index.html">Ana Sayfa</a>
+    <a href="odalar.html">Oda &amp; Süitler</a>
+    <a href="sss.html" class="active">SSS</a>
+    <a href="about.html">Hakkımızda</a>
+    <a href="iletisim.html">İletişim</a>
+  </nav>
+  <a class="nav-cta" href="rezervasyon.html">Rezervasyon</a>
+</header>
+
+<section class="page-hero" style="background-image:url('https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1800&q=80')">
+  <div class="wrap">
+    <div class="eyebrow">MERAK ETTİKLERİNİZ</div>
+    <h1>Sıkça Sorulan Sorular</h1>
+    <div class="crumbs"><a href="index.html">Ana Sayfa</a> · SSS</div>
+  </div>
+</section>
+
+<section class="intro">
+  <div class="wrap" style="max-width:760px;">
+    <div class="faq-item reveal open">
+      <div class="faq-q">Check-in ve check-out saatleri nedir? <span class="plus">+</span></div>
+      <div class="faq-a"><p>Check-in saat 14:00'te, check-out saat 12:00'de başlar. Uygunluk durumuna göre erken giriş veya geç çıkış talep edebilirsiniz.</p></div>
+    </div>
+    <div class="faq-item reveal">
+      <div class="faq-q">Rezervasyonumu ücretsiz iptal edebilir miyim? <span class="plus">+</span></div>
+      <div class="faq-a"><p>Giriş tarihinden 72 saat öncesine kadar yapılan iptallerde herhangi bir ücret alınmaz.</p></div>
+    </div>
+    <div class="faq-item reveal">
+      <div class="faq-q">Evcil hayvan kabul ediyor musunuz? <span class="plus">+</span></div>
+      <div class="faq-a"><p>Belirli odalarımızda küçük ve orta boy evcil hayvanlar ek ücret karşılığında kabul edilmektedir. Lütfen rezervasyon öncesi bizimle iletişime geçin.</p></div>
+    </div>
+    <div class="faq-item reveal">
+      <div class="faq-q">Otopark hizmeti mevcut mu? <span class="plus">+</span></div>
+      <div class="faq-a"><p>Tüm misafirlerimize ücretsiz vale otopark hizmeti sunulmaktadır.</p></div>
+    </div>
+    <div class="faq-item reveal">
+      <div class="faq-q">Havalimanı transfer hizmeti var mı? <span class="plus">+</span></div>
+      <div class="faq-a"><p>Concierge ekibimiz üzerinden özel araçla havalimanı transferi organize edilebilir; ücretlendirme mesafeye göre değişir.</p></div>
+    </div>
+    <div class="faq-item reveal">
+      <div class="faq-q">Kahvaltı oda fiyatına dahil mi? <span class="plus">+</span></div>
+      <div class="faq-a"><p>Evet, tüm oda ve süit rezervasyonlarımıza açık büfe kahvaltı dahildir.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap" style="text-align:center;">
+    <div class="reveal">
+      <div class="eyebrow">BAŞKA SORUNUZ MU VAR?</div>
+      <h2>Concierge ekibimizle iletişime geçin</h2>
+      <a class="cta-btn" href="iletisim.html">İletişime Geçin</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div><h5>Yıldız Grand Hotel</h5><p>İstanbul'un kalbinde, zarafeti ve konforu bir araya getiren üst segment bir konaklama deneyimi.</p></div>
+      <div><h5>Keşfet</h5><ul><li><a href="index.html">Ana Sayfa</a></li><li><a href="odalar.html">Oda &amp; Süitler</a></li><li><a href="etkinlikler.html">Etkinlikler</a></li><li><a href="iletisim.html">İletişim</a></li></ul></div>
+      <div><h5>Sosyal</h5><ul><li><a href="#">Instagram</a></li><li><a href="#">Facebook</a></li><li><a href="#">Twitter</a></li></ul></div>
+      <div><h5>Yasal</h5><ul><li><a href="#">Gizlilik Politikası</a></li><li><a href="#">Kullanım Şartları</a></li></ul></div>
+    </div>
+    <div class="foot-bottom"><span>© 2026 Yıldız Grand Hotel. Tüm hakları saklıdır.</span><span>Tasarım: kaandevs-ops</span></div>
+  </div>
+</footer>
+
+<script>
+  const header = document.getElementById('siteHeader');
+  window.addEventListener('scroll', () => header.classList.toggle('scrolled', window.scrollY > 40));
+  const io = new IntersectionObserver((entries) => { entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('is-visible'); io.unobserve(e.target); } }); }, { threshold: 0.15 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  document.querySelectorAll('.faq-item').forEach(item => {
+    item.querySelector('.faq-q').addEventListener('click', () => {
+      document.querySelectorAll('.faq-item').forEach(i => { if(i !== item) i.classList.remove('open'); });
+      item.classList.toggle('open');
+    });
+  });
+</script>
+</body>
+</html>

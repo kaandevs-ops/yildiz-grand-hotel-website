@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rezervasyon — Yıldız Grand Hotel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,450;9..144,600&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="premium-style.css">
+</head>
+<body>
+
+<header id="siteHeader">
+  <div class="brand">Yıldız Grand Hotel<small>İSTANBUL · EST. 1998</small></div>
+  <nav>
+    <a href="index.html">Ana Sayfa</a>
+    <a href="odalar.html">Oda &amp; Süitler</a>
+    <a href="index.html#hizmetler">Hizmetler</a>
+    <a href="about.html">Hakkımızda</a>
+    <a href="iletisim.html">İletişim</a>
+  </nav>
+  <a class="nav-cta" href="rezervasyon.html">Rezervasyon</a>
+</header>
+
+<section class="page-hero" style="background-image:url('https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&fit=crop&w=1800&q=80')">
+  <div class="wrap">
+    <div class="eyebrow">MÜSAİTLİK SORGULA</div>
+    <h1>Rezervasyon</h1>
+    <div class="crumbs"><a href="index.html">Ana Sayfa</a> · Rezervasyon</div>
+  </div>
+</section>
+
+<section class="intro">
+  <div class="wrap two-col" style="align-items:stretch;">
+    <div class="res-form reveal">
+      <div class="eyebrow" style="margin-bottom:26px;">REZERVASYON BİLGİLERİ</div>
+      <div class="frow">
+        <div><label>Giriş Tarihi</label><input type="date"></div>
+        <div><label>Çıkış Tarihi</label><input type="date"></div>
+      </div>
+      <div class="frow">
+        <div><label>Oda Tipi</label>
+          <select>
+            <option>Şehir Manzaralı Deluxe</option>
+            <option>Boğaz Manzaralı Süit</option>
+            <option>Presidential Süit</option>
+            <option>Aile Süiti</option>
+          </select>
+        </div>
+        <div><label>Misafir Sayısı</label>
+          <select><option>1 Yetişkin</option><option>2 Yetişkin</option><option>2 Yetişkin + Çocuk</option></select>
+        </div>
+      </div>
+      <div class="frow">
+        <div><label>Ad Soyad</label><input type="text" placeholder="Adınız Soyadınız"></div>
+        <div><label>Telefon</label><input type="tel" placeholder="+90 5__ ___ __ __"></div>
+      </div>
+      <div style="margin-bottom:26px;"><label>E-posta</label><input type="email" placeholder="ornek@eposta.com"></div>
+      <div style="margin-bottom:30px;"><label>Özel İstekler</label><textarea rows="3" placeholder="Örn: Geç check-out, kat tercihi..."></textarea></div>
+      <a class="cta-btn" href="javascript:void(0)" onclick="alert('Rezervasyon talebiniz alınmıştır. Ekibimiz en kısa sürede sizinle iletişime geçecektir.')">Rezervasyon Talebini Gönder</a>
+    </div>
+
+    <div class="res-side reveal">
+      <div class="eyebrow" style="color:var(--gold-soft);margin-bottom:20px;">NEDEN YILDIZ GRAND HOTEL?</div>
+      <h4>Rezervasyonunuzda dahil olanlar</h4>
+      <ul>
+        <li><span>Ücretsiz İptal</span><span>72 saate kadar</span></li>
+        <li><span>Kahvaltı</span><span>Dahil</span></li>
+        <li><span>Wi-Fi</span><span>Ücretsiz &amp; Yüksek Hız</span></li>
+        <li><span>Spa Girişi</span><span>%20 İndirimli</span></li>
+        <li><span>Check-in / out</span><span>14:00 / 12:00</span></li>
+      </ul>
+      <p style="margin-top:30px;font-size:13px;color:rgba(244,239,228,0.7);">Sorularınız için concierge ekibimiz 7/24 hizmetinizde: <br><strong style="color:#fff;">+90 212 555 01 01</strong></p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div><h5>Yıldız Grand Hotel</h5><p>İstanbul'un kalbinde, zarafeti ve konforu bir araya getiren üst segment bir konaklama deneyimi.</p></div>
+      <div><h5>Keşfet</h5><ul><li><a href="index.html">Ana Sayfa</a></li><li><a href="odalar.html">Oda &amp; Süitler</a></li><li><a href="etkinlikler.html">Etkinlikler</a></li><li><a href="iletisim.html">İletişim</a></li></ul></div>
+      <div><h5>Sosyal</h5><ul><li><a href="#">Instagram</a></li><li><a href="#">Facebook</a></li><li><a href="#">Twitter</a></li></ul></div>
+      <div><h5>Yasal</h5><ul><li><a href="#">Gizlilik Politikası</a></li><li><a href="#">Kullanım Şartları</a></li></ul></div>
+    </div>
+    <div class="foot-bottom"><span>© 2026 Yıldız Grand Hotel. Tüm hakları saklıdır.</span><span>Tasarım: kaandevs-ops</span></div>
+  </div>
+</footer>
+
+<script>
+  const header = document.getElementById('siteHeader');
+  window.addEventListener('scroll', () => header.classList.toggle('scrolled', window.scrollY > 40));
+  const io = new IntersectionObserver((entries) => { entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('is-visible'); io.unobserve(e.target); } }); }, { threshold: 0.15 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>

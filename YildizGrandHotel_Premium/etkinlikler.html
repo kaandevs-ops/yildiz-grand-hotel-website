@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Etkinlikler — Yıldız Grand Hotel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,450;9..144,600&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="premium-style.css">
+</head>
+<body>
+
+<header id="siteHeader">
+  <div class="brand">Yıldız Grand Hotel<small>İSTANBUL · EST. 1998</small></div>
+  <nav>
+    <a href="index.html">Ana Sayfa</a>
+    <a href="odalar.html">Oda &amp; Süitler</a>
+    <a href="etkinlikler.html" class="active">Etkinlikler</a>
+    <a href="about.html">Hakkımızda</a>
+    <a href="iletisim.html">İletişim</a>
+  </nav>
+  <a class="nav-cta" href="rezervasyon.html">Rezervasyon</a>
+</header>
+
+<section class="page-hero" style="background-image:url('https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=1800&q=80')">
+  <div class="wrap">
+    <div class="eyebrow">TAKVİMİMİZ</div>
+    <h1>Etkinlikler</h1>
+    <div class="crumbs"><a href="index.html">Ana Sayfa</a> · Etkinlikler</div>
+  </div>
+</section>
+
+<section class="rooms">
+  <div class="wrap">
+    <div class="reveal" style="max-width:600px;margin-bottom:56px;">
+      <div class="eyebrow">YIL BOYUNCA</div>
+      <h2 style="font-size:clamp(28px,3.2vw,40px);">İmza etkinliklerimiz ve özel geceler</h2>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:18px;">
+      <div class="event-card reveal">
+        <div class="event-date"><span class="d">14</span><span class="m">ARALIK</span></div>
+        <div class="event-body"><h4>Boğaz'da Yılbaşı Galası</h4><p>Şef Ömer Aydın'ın özel menüsü, canlı müzik ve Boğaz manzarasıyla yılbaşı kutlaması.</p><span class="meta">Teras Restoran · 20:00</span></div>
+      </div>
+      <div class="event-card reveal">
+        <div class="event-date"><span class="d">22</span><span class="m">ŞUBAT</span></div>
+        <div class="event-body"><h4>Şarap Tadım Akşamı</h4><p>Ege ve Trakya bölgesinden seçilmiş şaraplarla eşleştirilmiş beş çeşit tadım menüsü.</p><span class="meta">Şarap Mahzeni · 19:30</span></div>
+      </div>
+      <div class="event-card reveal">
+        <div class="event-date"><span class="d">08</span><span class="m">MART</span></div>
+        <div class="event-body"><h4>Spa &amp; Wellness Günü</h4><p>Tüm süit misafirlerine özel, hamam ve masaj paketlerinde %30 indirim.</p><span class="meta">Spa Merkezi · Tüm Gün</span></div>
+      </div>
+      <div class="event-card reveal">
+        <div class="event-date"><span class="d">19</span><span class="m">NİSAN</span></div>
+        <div class="event-body"><h4>İstanbul Kültür Turu</h4><p>Concierge eşliğinde tarihi yarımada ve Boğaz'da özel tekne turu.</p><span class="meta">Lobi Buluşma · 09:00</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap" style="text-align:center;">
+    <div class="reveal">
+      <div class="eyebrow">YERİNİZİ AYIRTIN</div>
+      <h2>Bir sonraki etkinliğimize katılın</h2>
+      <a class="cta-btn" href="iletisim.html">Bilgi Alın</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div><h5>Yıldız Grand Hotel</h5><p>İstanbul'un kalbinde, zarafeti ve konforu bir araya getiren üst segment bir konaklama deneyimi.</p></div>
+      <div><h5>Keşfet</h5><ul><li><a href="index.html">Ana Sayfa</a></li><li><a href="odalar.html">Oda &amp; Süitler</a></li><li><a href="etkinlikler.html">Etkinlikler</a></li><li><a href="iletisim.html">İletişim</a></li></ul></div>
+      <div><h5>Sosyal</h5><ul><li><a href="#">Instagram</a></li><li><a href="#">Facebook</a></li><li><a href="#">Twitter</a></li></ul></div>
+      <div><h5>Yasal</h5><ul><li><a href="#">Gizlilik Politikası</a></li><li><a href="#">Kullanım Şartları</a></li></ul></div>
+    </div>
+    <div class="foot-bottom"><span>© 2026 Yıldız Grand Hotel. Tüm hakları saklıdır.</span><span>Tasarım: kaandevs-ops</span></div>
+  </div>
+</footer>
+
+<script>
+  const header = document.getElementById('siteHeader');
+  window.addEventListener('scroll', () => header.classList.toggle('scrolled', window.scrollY > 40));
+  const io = new IntersectionObserver((entries) => { entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('is-visible'); io.unobserve(e.target); } }); }, { threshold: 0.15 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
