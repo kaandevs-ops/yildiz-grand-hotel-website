@@ -7,7 +7,7 @@
   <p>
     <img src="https://img.shields.io/badge/HTML-5-E34F26?logo=html5&logoColor=white" alt="HTML5" />
     <img src="https://img.shields.io/badge/CSS-3-1572B6?logo=css3&logoColor=white" alt="CSS3" />
-    <img src="https://img.shields.io/github/license/kaandevs-ops/yildiz-grand-hotel-website" alt="License" />
+    <img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg" alt="License: Apache 2.0" />
   </p>
 </div>
 
@@ -22,17 +22,20 @@
 
 ## 🖼️ Screenshots
 
-| Home | Rooms & Suites |
-|---|---|
-| ![Home](assets/screenshot-home.png) | ![Rooms & Suites](assets/screenshot-rooms.png) |
+### Home
+![Home](assets/screenshot-home.png)
 
-| Room Detail | Pricing |
-|---|---|
-| ![Room Detail](assets/screenshot-room-detail.png) | ![Pricing](assets/screenshot-room-pricing.png) |
+### Rooms & Suites
+![Rooms & Suites](assets/screenshot-rooms.png)
 
-| About |
-|---|
-| ![About](assets/screenshot-about.png) |
+### Room Detail
+![Room Detail](assets/screenshot-room-detail.png)
+
+### Pricing
+![Pricing](assets/screenshot-room-pricing.png)
+
+### About
+![About](assets/screenshot-about.png)
 
 ## 📄 Pages
 
